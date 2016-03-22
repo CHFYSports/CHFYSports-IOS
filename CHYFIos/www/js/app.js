@@ -26,15 +26,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
   .state('login', {
     url: '/login',
-    views: {
-      'login': {
+    
         templateUrl: 'templates/login.html',
         controller: 'loginCtrl'
-      }
-    }
+      
+    
   })
 
-    .state('tab', {
+  .state('main', {
+                url : '/main',
+                // abstract : true,
+                templateUrl : 'templates/sideMenu.html'
+                
+                // controller : 'MainController'
+            })
+
+
+    .state('main.tab', {
     url: '/tab',
     views: {
       'tab': {
@@ -44,7 +52,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
 
-  .state('tab.dash', {
+  .state('main.tab.dash', {
     url: '/dash',
     views: {
       'tab-dash': {
@@ -54,7 +62,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.chats', {
+  .state('main.tab.chats', {
       url: '/chats',
       views: {
         'tab-chats': {
@@ -63,7 +71,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-    .state('tab.chat-detail', {
+    .state('main.tab.chat-detail', {
       url: '/chats/:chatId',
       views: {
         'tab-chats': {
@@ -73,7 +81,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-  .state('tab.account', {
+  .state('main.tab.account', {
     url: '/account',
     views: {
       'tab-account': {
