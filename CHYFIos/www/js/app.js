@@ -33,6 +33,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     
   })
 
+  .state('forgetPw', {
+    url: '/forgetPw',
+    
+        templateUrl: 'templates/forgetPw.html',
+        controller: 'resetPwCtrl'
+      
+    
+  })
+
   .state('main', {
                 url : '/main',
                 // abstract : true,
