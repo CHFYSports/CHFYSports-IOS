@@ -90,4 +90,33 @@ angular.module('starter.controllers', [])
     $state.go('login');
   };
 
+})
+
+.controller('registerCtrl', function($scope, $http, $state) {
+
+  
+  $scope.userInfo= {};
+  $scope.doResgister = function() {
+    console.log('Registering', $scope.userInfo);
+//     var  postData = {
+
+//             "password": $scope.password,
+//             "username": $scope.username
+//           };
+
+//   $http.post('http://login_URL', postData)
+//   .success(function(data) {
+//     alert("SUCCESS")
+//     $state.go('tab');
+//   })
+//   .error(function(data) {
+//     alert("ERROR");
+// }); }  
+    $state.go('main.tab');
+  };
+  $scope.backToLogin = function() {
+    console.log("back to login");
+    $state.go('login');
+  };
+
 });

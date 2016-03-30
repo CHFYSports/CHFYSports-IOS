@@ -1,0 +1,34 @@
+<ion-header-bar>
+    <h1 class="title">User Information</h1>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doResgister()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Email Address</span>
+          <input type="text" ng-model="userInfo.domain">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Confirm Email Address</span>
+          <input type="text">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Create Password</span>
+          <input type="password" ng-model="userInfo.password">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Confirm Password</span>
+          <input type="password">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Account Nickname</span>
+          <input type="text" ng-model="userInfo.nickName">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Register</button>
+        </label>
+      </div>
+    </form>
+    <button class="button button-block button-positive" ui-sref='login'>Back</button>
+    <button class="button button-block button-positive">Term of use</button>
+  </ion-content>
