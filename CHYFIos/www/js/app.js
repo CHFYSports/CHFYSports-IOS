@@ -33,6 +33,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     
   })
 
+  .state('forgetPw', {
+    url: '/forgetPw',
+    
+        templateUrl: 'templates/forgetPw.html',
+        controller: 'resetPwCtrl'  
+    
+  })
+
+  .state('register', {
+    url: '/register',
+    
+        templateUrl: 'templates/register.html',
+        controller: 'registerCtrl'   
+    
+  })
+
   .state('main', {
                 url : '/main',
                 // abstract : true,

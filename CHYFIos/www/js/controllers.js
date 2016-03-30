@@ -50,10 +50,73 @@ angular.module('starter.controllers', [])
 // }); }  
     $state.go('main.tab');
   };
+
+  $scope.doForgetPw = function() {
+    console.log('Doing ForgetPw');
+    $state.go('forgetPw');
+  };
 })
 
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {
     enableFriends: true
   };
+})
+
+.controller('resetPwCtrl', function($scope, $http, $state) {
+
+  
+  $scope.email = {};
+  $scope.doResetPw = function() {
+    console.log('Doing ResetPw', $scope.email);
+//     var  postData = {
+
+//             "password": $scope.password,
+//             "username": $scope.username
+//           };
+
+//   $http.post('http://login_URL', postData)
+//   .success(function(data) {
+//     alert("SUCCESS")
+//     $state.go('tab');
+//   })
+//   .error(function(data) {
+//     alert("ERROR");
+// }); }  
+    $state.go('login');
+  };
+  $scope.backToLogin = function() {
+    console.log("back to login");
+    $state.go('login');
+  };
+
+})
+
+.controller('registerCtrl', function($scope, $http, $state) {
+
+  
+  $scope.userInfo= {};
+  $scope.doResgister = function() {
+    console.log('Registering', $scope.userInfo);
+//     var  postData = {
+
+//             "password": $scope.password,
+//             "username": $scope.username
+//           };
+
+//   $http.post('http://login_URL', postData)
+//   .success(function(data) {
+//     alert("SUCCESS")
+//     $state.go('tab');
+//   })
+//   .error(function(data) {
+//     alert("ERROR");
+// }); }  
+    $state.go('main.tab');
+  };
+  $scope.backToLogin = function() {
+    console.log("back to login");
+    $state.go('login');
+  };
+
 });
