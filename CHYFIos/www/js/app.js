@@ -51,17 +51,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   .state('main', {
                 url : '/main',
-                // abstract : true,
+                abstract : true,
                 templateUrl : 'templates/sideMenu.html'
                 
                 // controller : 'MainController'
             })
 
+  .state('main.fantasyHome', {
+    url: '/fantasyHome',
+    views: {
+      'mainContent': {
+        templateUrl: 'templates/fantasyHome.html'
+      }
+    }
+  })
 
-    .state('main.tab', {
+  .state('main.tab', {
     url: '/tab',
     views: {
-      'tab': {
+      'mainContent': {
         templateUrl: 'templates/tabs.html'
       }
     }

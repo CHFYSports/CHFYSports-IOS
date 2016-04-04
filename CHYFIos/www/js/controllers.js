@@ -48,7 +48,7 @@ angular.module('starter.controllers', [])
 //   .error(function(data) {
 //     alert("ERROR");
 // }); }  
-    $state.go('main.tab');
+    $state.go('main.fantasyHome');
   };
 
   $scope.doForgetPw = function() {
