@@ -66,15 +66,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('main.tab', {
-    url: '/tab',
-    views: {
-      'mainContent': {
-        templateUrl: 'templates/tabs.html'
-      }
-    }
-  })
-
   .state('main.createLeague', {
     url: '/createLeague',
     views: {
@@ -84,6 +75,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('main.joinLeague', {
+    url: '/joinLeague',
+    views: {
+      'mainContent': {
+        templateUrl: 'templates/joinLeague.html'
+      }
+    }
+  })
+
+  .state('main.tab', {
+    url: '/tab',
+    views: {
+      'mainContent': {
+        templateUrl: 'templates/tabs.html'
+      }
+    }
+  })
 
   .state('main.tab.dash', {
     url: '/dash',

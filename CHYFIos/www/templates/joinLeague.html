@@ -1,0 +1,26 @@
+<ion-header-bar>
+    <h1 class="title">Join a league</h1>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doJoinLeague()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Invitation Code</span>
+          <input type="text" ng-model="joinLeague.inviCode">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">League Type</span>
+          <select>
+              <option selected>Default</option>
+              <option >Green</option>
+              <option>Red</option>
+          </select>
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Submit</button>
+        </label>
+      </div>
+    </form>
+    <button class="button button-block button-positive" ui-sref='main.fantasyHome'>Back</button>
+    <button class="button button-block button-positive" ui-sref='main.fantasyHome'>Scan QR code</button>
+  </ion-content>
