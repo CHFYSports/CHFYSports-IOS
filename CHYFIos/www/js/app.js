@@ -75,6 +75,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('main.createLeague', {
+    url: '/createLeague',
+    views: {
+      'mainContent': {
+        templateUrl: 'templates/createLeague.html'
+      }
+    }
+  })
+
 
   .state('main.tab.dash', {
     url: '/dash',
